@@ -14,18 +14,23 @@ export function TopCommands() {
           onClick={clear}
           disabled={undoStack.length === 0}
         >
-          <FileIcon size={16} />
+          <FileIcon size={16}>
+            <title>clear</title>
+          </FileIcon>
         </Button>
         <Separator orientation="vertical" className="h-10 hidden" />
 
         <div className="flex-1" />
         <Button
+          title="undo"
           variant={"outline"}
           size={"icon"}
           onClick={undo}
           disabled={undoStack.length === 0}
         >
-          <Undo />
+          <Undo>
+            <title>undo</title>
+          </Undo>
         </Button>
       </div>
     </div>

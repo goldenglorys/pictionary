@@ -23,6 +23,7 @@ export function PenAndEraserBar() {
   return (
     <div className="fixed right-1 flex flex-col items-center gap-1 top-1/2 -translate-y-1/2">
       <Button
+        title="pen"
         variant={tool === "pen" ? "default" : "outline"}
         size={"icon"}
         onClick={() => setTool("pen")}
@@ -37,8 +38,10 @@ export function PenAndEraserBar() {
         min={1}
         step={1}
         className="h-[200px]"
+        title="slider"
       />
       <Button
+        title="eraser"
         variant={tool === "eraser" ? "default" : "outline"}
         size={"icon"}
         onClick={() => setTool("eraser")}

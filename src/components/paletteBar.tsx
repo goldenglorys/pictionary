@@ -40,6 +40,7 @@ function ColorButton({
 }) {
   return (
     <Button
+      title={color}
       variant={"outline"}
       size={"icon"}
       onClick={onClick}

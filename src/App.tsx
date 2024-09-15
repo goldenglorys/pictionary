@@ -44,7 +44,9 @@ function App() {
           variant={"ghost"}
           onClick={() => setKeys(null)}
         >
-          <LogOut />
+          <LogOut>
+            <title>logout</title>
+          </LogOut>
         </Button>
       </main>
     </>
