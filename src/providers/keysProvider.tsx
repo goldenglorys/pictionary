@@ -3,7 +3,7 @@ import { providerFactory } from "../lib/providerFactory";
 import { Keys } from "../types";
 
 const [KeysProvider, useKeys] = providerFactory(() => {
-  const [keys, setKeys] = useLocalStorage<Keys | null>("kingdom_keys", null);
+  const [keys, setKeys] = useLocalStorage<Keys | null>("not_pictionary_keys", null);
 
   return {
     keys,
