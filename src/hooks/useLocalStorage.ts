@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
+import secureLocalStorage from "react-secure-storage";
 
 function useLocalStorage<T>(key: string, initialValue: T) {
   // State to store the current value
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
-      // Get from local storage by key
-      const item = window.localStorage.getItem(key);
+      // Get from secure local storage by key
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const item: any = secureLocalStorage.getItem(key);
       // Parse stored json or if none return initialValue
       return item ? JSON.parse(item) : initialValue;
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -14,7 +16,7 @@ function useLocalStorage<T>(key: string, initialValue: T) {
     }
   });
 
-  // Function to set the value in both state and local storage
+  // Function to set the value in both state and secure local storage
   const setValue = (value: T | ((val: T) => T)) => {
     try {
       // Allow value to be a function so we have the same API as useState
@@ -22,17 +24,17 @@ function useLocalStorage<T>(key: string, initialValue: T) {
         value instanceof Function ? value(storedValue) : value;
       // Save state
       setStoredValue(valueToStore);
-      // Save to local storage
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+      // Save to secure local storage
+      secureLocalStorage.setItem(key, JSON.stringify(valueToStore));
     } catch (error) {
       console.error("Error setting localStorage key “${key}”: ", error);
     }
   };
 
-  // Effect to update local storage when key or value changes
+  // Effect to update secure local storage when key or value changes
   useEffect(() => {
     if (window) {
-      window.localStorage.setItem(key, JSON.stringify(storedValue));
+      secureLocalStorage.setItem(key, JSON.stringify(storedValue));
     }
   }, [key, storedValue]);
 
