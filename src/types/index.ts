@@ -7,3 +7,5 @@ interface Message {
 interface Keys {
   groqApiKey: string;
 }
+
+export type { Message, Keys };
