@@ -45,6 +45,12 @@ Welcome to **G - Vision**, a fun and interactive drawing and guessing game inspi
 
 4. **Log Out**: You can log out at any time by clicking the logout button. This will clear your securely stored API key from the storage.
 
+---
+
+<img width="1676" alt="Screenshot 2024-09-16 at 02 22 00" src="https://github.com/user-attachments/assets/3112dc0d-9f5b-4bee-818b-fc9bc53bcbb3">
+
+---
+
 ## Technologies Used
 
 - **React**: js library for the UI.
