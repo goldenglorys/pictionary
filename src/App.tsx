@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { KeysProvider } from "./providers/keysProvider";
 import { LetMeGuessProvider } from "./providers/letMeGuessProvider";
 import { EnterKey } from "./components/enterKey";
 import { LetMeGuess } from "./components/letMeGuess";
-import { Button } from "./common/button";
-import { LogOut } from "lucide-react";
+import LandingPage from "./components/LandingPage";
+import HowToPlayPage from "./components/howToPlay";
+import SettingsPage from "./components/settingsPage";
 import { useKeys } from "./providers/keysProvider";
 import { createGridTile } from "./lib/utils";
 import "./App.css";
@@ -33,23 +35,14 @@ function App() {
   }
 
   return (
-    <>
-      <main className="h-svh" style={{ backgroundImage: `url(${GRID_TILE})` }}>
-        <LetMeGuessProvider>
-          <LetMeGuess />
-        </LetMeGuessProvider>
-        <Button
-          className="fixed bottom-1 right-1"
-          size={"icon"}
-          variant={"ghost"}
-          onClick={() => setKeys(null)}
-        >
-          <LogOut>
-            <title>logout</title>
-          </LogOut>
-        </Button>
-      </main>
-    </>
+    <div
+      className="min-h-screen"
+      style={{ backgroundImage: `url(${GRID_TILE})` }}
+    >
+      <LetMeGuessProvider>
+        <LetMeGuess />
+      </LetMeGuessProvider>
+    </div>
   );
 }
 
@@ -57,7 +50,16 @@ export default function RootLayout() {
   return (
     <div className={"overflow-hidden"}>
       <KeysProvider>
-        <App />
+        <Router>
+          <div className="min-h-screen">
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/play" element={<App />} />
+              <Route path="/how-to-play" element={<HowToPlayPage />} />
+              <Route path="/settings" element={<SettingsPage />} />
+            </Routes>
+          </div>
+        </Router>
       </KeysProvider>
     </div>
   );
