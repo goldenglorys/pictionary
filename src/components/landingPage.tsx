@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 import { ChevronRight, Pencil, Brain, Users } from "lucide-react";
 import Navigation from "./navigation";
+
 export default function LandingPage() {
   return (
-    <div className="min-h-screen pt-16 bg-black text-white">
+    <div className="min-h-screen pt-16  bg-black text-white">
       <Navigation />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-20 text-center">
           <h1 className="text-6xl font-bold mb-6">Draw, Guess, Play with AI</h1>
           <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Experience Pictionary with llama and llava models. Draw
-            anything and watch the AI guess in real-time.
+            Experience the future of Pictionary with GROQ's advanced AI. Draw
+            anything and watch the AI guess in real-time, or challenge yourself
+            to guess what the AI draws.
           </p>
           <Link
             to="/play"
@@ -20,27 +22,42 @@ export default function LandingPage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-16">
-          <div className="p-6 border border-white/10 rounded-lg">
-            <Pencil className="w-12 h-12 mb-4" />
-            <h3 className="text-xl font-bold mb-2">Draw Freely</h3>
-            <p className="text-white/70">
-              Use our intuitive drawing tools to create anything you can imagine
-            </p>
-          </div>
-          <div className="p-6 border border-white/10 rounded-lg">
-            <Brain className="w-12 h-12 mb-4" />
-            <h3 className="text-xl font-bold mb-2">AI Powered</h3>
-            <p className="text-white/70">
-              Watch as our AI instantly recognizes your drawings in real-time
-            </p>
-          </div>
-          <div className="p-6 border border-white/10 rounded-lg">
-            <Users className="w-12 h-12 mb-4" />
-            <h3 className="text-xl font-bold mb-2">Community Driven</h3>
-            <p className="text-white/70">
-              Join a vibrant community of artists and guessers
-            </p>
+        <div className="py-16">
+          <h2 className="text-4xl font-bold mb-12 text-center">Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="p-6 border border-white/10 rounded-lg">
+              <Pencil className="w-12 h-12 mb-4" />
+              <h3 className="text-xl font-bold mb-2">
+                Interactive Drawing Board
+              </h3>
+              <p className="text-white/70">
+                A user-friendly canvas where you can let your creativity flow.
+              </p>
+            </div>
+            <div className="p-6 border border-white/10 rounded-lg">
+              <Brain className="w-12 h-12 mb-4" />
+              <h3 className="text-xl font-bold mb-2">AI-Powered Guessing</h3>
+              <p className="text-white/70">
+                Advanced models tries to guess what you're drawing in real-time.
+              </p>
+            </div>
+            <div className="p-6 border border-white/10 rounded-lg">
+              <Users className="w-12 h-12 mb-4" />
+              <h3 className="text-xl font-bold mb-2">
+                Secure API Key Management
+              </h3>
+              <p className="text-white/70">
+                API keys are securely stored locally on your device and
+                encrypted.
+              </p>
+            </div>
+            <div className="p-6 border border-white/10 rounded-lg">
+              <Users className="w-12 h-12 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Responsive Design</h3>
+              <p className="text-white/70">
+                Play on any device - desktop, tablet, or mobile.
+              </p>
+            </div>
           </div>
         </div>
 
