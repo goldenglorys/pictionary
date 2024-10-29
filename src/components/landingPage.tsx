@@ -4,7 +4,7 @@ import Navigation from "./navigation";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen pt-16  bg-black text-white">
+    <div className="min-h-screen pt-16 bg-black text-white">
       <Navigation />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-20 text-center">
@@ -65,41 +65,33 @@ export default function LandingPage() {
           <h2 className="text-4xl font-bold mb-12 text-center">
             AI Capabilities
           </h2>
-          <div className="space-y-8">
-            <div className="flex items-center space-x-8">
-              <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-bold text-xl">
+          <div className="space-y-12 text-center">
+            <div>
+              <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-bold text-xl mx-auto mb-4">
                 1
               </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">
-                  Real-Time Recognition
-                </h3>
-                <p className="text-white/70">
-                  Our AI can recognize your drawings as you create them
-                </p>
-              </div>
+              <h3 className="text-xl font-bold mb-2">Real-Time Recognition</h3>
+              <p className="text-white/70 max-w-md mx-auto">
+                Our AI can recognize your drawings as you create them.
+              </p>
             </div>
-            <div className="flex items-center space-x-8">
-              <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-bold text-xl">
+            <div>
+              <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-bold text-xl mx-auto mb-4">
                 2
               </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">High Accuracy</h3>
-                <p className="text-white/70">
-                  Achieve high accuracy in guessing and recognition
-                </p>
-              </div>
+              <h3 className="text-xl font-bold mb-2">High Accuracy</h3>
+              <p className="text-white/70 max-w-md mx-auto">
+                Achieve high accuracy in guessing and recognition.
+              </p>
             </div>
-            <div className="flex items-center space-x-8">
-              <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-bold text-xl">
+            <div>
+              <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-bold text-xl mx-auto mb-4">
                 3
               </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Continuous Learning</h3>
-                <p className="text-white/70">
-                  Our AI continuously learns and improves with every interaction
-                </p>
-              </div>
+              <h3 className="text-xl font-bold mb-2">Continuous Learning</h3>
+              <p className="text-white/70 max-w-md mx-auto">
+                Our AI continuously learns and improves with every interaction.
+              </p>
             </div>
           </div>
         </div>
