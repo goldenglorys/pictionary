@@ -4,7 +4,7 @@ import { KeysProvider } from "./providers/keysProvider";
 import { LetMeGuessProvider } from "./providers/letMeGuessProvider";
 import { EnterKey } from "./components/enterKey";
 import { LetMeGuess } from "./components/letMeGuess";
-import LandingPage from "./components/LandingPage";
+import LandingPage from "./components/landingPage";
 import HowToPlayPage from "./components/howToPlay";
 import SettingsPage from "./components/settingsPage";
 import { useKeys } from "./providers/keysProvider";
